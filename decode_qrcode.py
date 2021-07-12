@@ -9,6 +9,7 @@ file_path = "./"
 for each_image in os.listdir(file_path):
 
     image_type = os.path.splitext(each_image)[-1].lower()
+    
     if image_type not in ['.jpg', '.jpeg', '.png']: 
         continue
 
