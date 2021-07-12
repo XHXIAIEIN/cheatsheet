@@ -12,7 +12,10 @@ for each_image in os.listdir(file_path):
     if image_type not in ['.jpg', '.jpeg', '.png']: 
         continue
 
-    data = decode(Image.open(each_image))[0][0].decode("utf-8")
+    try:
+        data = decode(Image.open(each_image))[0][0].decode("utf-8")
+    except:
+        continue
     
     qr = QRCode(version=4, box_size=5, border=0, error_correction=ERROR_CORRECT_L)
     qr.add_data(data)
