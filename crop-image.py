@@ -39,7 +39,7 @@ for each_image in os.listdir(IMAGE_INPUT_PATH):
     plt.subplot(1, 2, 2)
     plt.imshow(roi_area)
     plt.axis('off')
-
+    
     # 裁剪完成的文件路径
     image_output_fullname = IMAGE_OUTPUT_PATH + "/" + each_image
 
