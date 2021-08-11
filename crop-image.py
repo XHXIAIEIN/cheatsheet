@@ -9,7 +9,7 @@ IMAGE_INPUT_PATH = 'D:/Desktop/新建文件夹'
 IMAGE_OUTPUT_PATH = 'D:/Desktop/新建文件夹/output'
 
 # 裁剪区域：上、左、下、右
-BOX_UP,BOX_LEFT,BOX_DOWN,BOX_RIGHT,= 470, 0, 828, 828
+BOX_UP,BOX_LEFT,BOX_DOWN,BOX_RIGHT = 470, 0, 828, 828
 
 if not os.path.exists(IMAGE_OUTPUT_PATH):
     os.makedirs(IMAGE_OUTPUT_PATH)
