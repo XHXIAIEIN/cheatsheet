@@ -33,6 +33,6 @@ for each_image in os.listdir(file_path):
 
     img = qr.make_image()
     img = img.resize((128, 128), Image.ANTIALIAS)
-    img.save(each_image.split("_")[0])
+    img.save(each_image.split("_")[0] + ".png")
 
     os.remove(each_image)
