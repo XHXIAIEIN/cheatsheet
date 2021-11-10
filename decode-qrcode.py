@@ -4,6 +4,15 @@ from qrcode import *
 from pyzbar.pyzbar import decode
 from PIL import Image
 
+#===============================================================================
+# · Install
+#===============================================================================
+#  pip install qrtools
+#  pip install qrcode
+#  pip install pyzbar
+#  pip install pillow
+#===============================================================================
+
 file_path = "./"
 
 for each_image in os.listdir(file_path):
@@ -24,6 +33,6 @@ for each_image in os.listdir(file_path):
 
     img = qr.make_image()
     img = img.resize((128, 128), Image.ANTIALIAS)
-    img.save(each_image.split("_")[0] +".png")
+    img.save(each_image.split("_")[0])
 
     os.remove(each_image)
