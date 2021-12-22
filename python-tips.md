@@ -20,6 +20,8 @@ blue
 purple
 ```
 
+<br>
+
 ### Case 2
 
 ```python
@@ -36,6 +38,9 @@ output:
 3: blue
 4: purple
 ```
+
+<br>
+
 
 ### Case 3
 
@@ -54,6 +59,9 @@ output:
 4: purple
 ```
 
+<br>
+
+
 ### Case 4
 
 ```python
@@ -70,6 +78,10 @@ output:
 03: blue
 04: purple
 ```
+
+
+<br>
+
 
 ### Case 5
 
@@ -90,6 +102,9 @@ output:
 ```
 
 
+<br>
+
+
 ### Case 6
 
 ```python
@@ -102,6 +117,9 @@ output:
 ```
 ['r_e_d', 'g_r_e_e_n', 'b_l_u_e', 'p_u_r_p_l_e']
 ```
+
+
+<br>
 
 
 ### Case 7
@@ -118,4 +136,5 @@ output:
 ```
 
 
+<br>
 
