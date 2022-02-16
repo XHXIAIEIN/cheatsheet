@@ -12,6 +12,32 @@ abc=helloworld
 
 ---
 
+## [tag]
+```
+/\[([^\]]*)\]/
+```
+
+case:
+```
+const line = [tag]
+const tag = line.match(/\[([^\]]*)\]/)[1].trim();
+```
+
+---
+
+## (str)
+```
+/\(\#([^\)]*)\)/
+```
+
+```
+const line = (tag)
+const str = line.match(/\(\#([^\)]*)\)/);
+```
+
+---
+
+
 ## name:str
 ```
 /^([^\:]+)\:(.*)/
@@ -19,10 +45,10 @@ abc=helloworld
 
 case:
 ```
-line = "name : Hello World !"
-var regex = /^([^\:]+)\:(.*)/
-var speaker = line.match(regex)[1].trim();
-var dialogue = line.match(regex)[2].trim();
+const line = "name : Hello World !"
+const regex = /^([^\:]+)\:(.*)/
+const speaker = line.match(regex)[1].trim();
+const dialogue = line.match(regex)[2].trim();
 ```
 
 ---
