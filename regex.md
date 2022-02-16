@@ -32,7 +32,7 @@ const tag = line.match(/\[([^\]]*)\]/)[1].trim();
 
 ```
 const line = (tag)
-const str = line.match(/\(\#([^\)]*)\)/);
+const str = line.match(/\(\#([^\)]*)\)/).trim();
 ```
 
 ---
