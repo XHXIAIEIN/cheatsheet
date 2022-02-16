@@ -12,6 +12,21 @@ abc=helloworld
 
 ---
 
+## name:
+```
+/^([^\:]+)\:(.*)/
+```
+
+case:
+```
+line = "name : Hello World !"
+var regex = /^([^\:]+)\:(.*)/
+var speaker = line.match(regex)[1].trim();
+var dialogue = line.match(regex)[2].trim();
+```
+
+---
+
 ## style="" 
 ```
 style="[\s\S]*?"
