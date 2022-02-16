@@ -12,7 +12,7 @@ abc=helloworld
 
 ---
 
-## name:
+## name:str
 ```
 /^([^\:]+)\:(.*)/
 ```
