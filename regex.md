@@ -23,6 +23,34 @@ const line = [tag]
 const tag = line.match(/\[([^\]]*)\]/)[1].trim();
 ```
 
+
+## [This is a choice.](#text)
+
+```
+/\(#(.+?)\)/
+```
+
+```
+/\(\#(.*)\)/
+```
+
+```
+/\[([^\]]+)\]\(#([^)]+)\)/
+```
+
+```
+const str = '[continue](#next)'
+const re = /\(#(.+?)\)/
+
+str.match(re)
+```
+
+case:
+```
+const line = [tag]
+const tag = line.match(/\[([^\]]*)\]/)[1].trim();
+```
+
 ---
 
 ## (str)
