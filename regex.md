@@ -20,15 +20,23 @@
 ##{if condition ? True : False}
 
 ```
-\{if?[\s]+?(\w+)?[\s]*?([<>!=]+)?[\s]*(\d+|\w+|[\"].*[\"])?[\s]*[\?]?[\s]*([\"].*[\"]|\w+)[\s]*\:[\s]*([\"].*[\"]|\w+)?[\s]*[\}]
+\{if?\s+?(?<condition>(\w+)\s*?([<>!=]+)?\s*?(\d+|\w+|[?<="].*?[?="]))\s*?\?[\s]*?(?<True>\d+|\w+|[?<="].*?[?="])[\s*]?[\:]?[\s*]?(?<False>\d+|\w+|[\"].*?[\"])?
 ```
 
 ```
-Hi, {if gold >= 0 ? variable1 : variable2 }. You have {gold} coin. Do you want to buy some {fruit}?
-```
+Hi, {if gold >= 0 ?  "Rich   Man" : "Guy"}. You have {gold} coin. Do you want to buy some {fruit}?
 
-```
-Hi, {if name >= "str" ? name1 : "str"}. You have {gold} coin. Do you want to buy some {fruit}?
+Hi, {if gold >= "12312 32112" ?  nam1 : name2}. You have {gold} coin. Do you want to buy some {fruit}?
+
+Hi, {if gold >= coin ?  nam1 : name2}. You have {gold} coin. Do you want to buy some {fruit}?
+
+Hi, {if gold >= coin ?  nam1}. You have {gold} coin. Do you want to buy some {fruit}?
+
+Hi, {if gold >= 0 ?"Rich   Man"}. You have {gold} coin. Do you want to buy some {fruit}?
+
+Hi, {if gold>=0?1}. You have {gold} coin. Do you want to buy some {fruit}?
+
+Hi, {if gold >= 2 ? 123 : 0}. You have {gold} coin. Do you want to buy some {fruit}?
 ```
 
 
