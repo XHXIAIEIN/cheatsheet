@@ -20,11 +20,15 @@
 ##{if condition ? True : False}
 
 ```
-[{if]?[\s+]?(\w+)?[\s+]?([<>!=]+)?[\s+](\w+)?[\s+][\?]?[\s+](\S+)[\s+]:?[\s+]+(\w+)?[\s+]?[\}]
+\{if?[\s]+?(\w+)?[\s]*?([<>!=]+)?[\s]*(\d+|\w+|[\"].*[\"])?[\s]*[\?]?[\s]*([\"].*[\"]|\w+)[\s]*\:[\s]*([\"].*[\"]|\w+)?[\s]*[\}]
 ```
 
 ```
-Hi, {if gold >= 0 ? name1 :  name2}. You have {gold} coin. Do you want to buy some {fruit}?
+Hi, {if gold >= 0 ? variable1 : variable2 }. You have {gold} coin. Do you want to buy some {fruit}?
+```
+
+```
+Hi, {if name >= "str" ? name1 : "str"}. You have {gold} coin. Do you want to buy some {fruit}?
 ```
 
 
