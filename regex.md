@@ -16,6 +16,16 @@
 
 `(?<=\()\S+(?=\))` 就是匹配以 `(` 开头，以 `)` 结尾，里面最少有一个非空白的字符串, 但不包含首尾的括号。
 
+
+## {if condition ? result}
+
+```
+\{if\s+((\w+)[\s*]?([<>!=]+)[\s*]?(.*?[^\}]))[\s*]?[\?][\s*]?(.*?[^\|^:}]*)\}
+```
+
+```
+Hi, {if name >= "Name" ?  "Rich  Man!" : {if A >= B ? "Rich  Man!"}} You have {if gold>=0?"Rich  Man!":{if A>=B?"Rich  Man!"} coin. 
+```
   
 ## {if condition ? True : False}
 
