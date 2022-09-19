@@ -12,6 +12,9 @@ import qrcode
 from pyzbar.pyzbar import decode
 from PIL import Image
 
+
+file_path = ".\"
+
 # 序号
 i = 1
 
@@ -19,6 +22,8 @@ class MyHandler(FileSystemEventHandler):
     def on_created(self, event):
         global i
 
+        print(event.src_path)
+        os.chdir(file_path)
         filename = os.path.basename(event.src_path)
         extension = filename.split(".")[-1]  # file.jpg
         new_filename = "{:02d}.{}".format(i, extension) # 00.jpg
@@ -39,7 +44,7 @@ class MyHandler(FileSystemEventHandler):
 
 if __name__ == "__main__":
     observer = Observer()
-    observer.schedule(event_handler=MyHandler(), path=".", recursive=True)
+    observer.schedule(event_handler=MyHandler(), path=file_path, recursive=True)
     observer.start()
 
     try:
