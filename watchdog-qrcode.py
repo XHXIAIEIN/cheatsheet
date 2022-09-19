@@ -18,24 +18,24 @@ i = 1
 class MyHandler(FileSystemEventHandler):
     def on_created(self, event):
         global i
+
         filename = os.path.basename(event.src_path)
-        ext = os.path.splitext(filename)[-1]
-        newname = f"{i}{ext}"
+        extension = filename.split(".")[-1]  # file.jpg
+        new_filename = "{:02d}.{}".format(i, extension) # 00.jpg
+        os.rename(filename, new_filename)
+        print(f"created: {new_filename}")        
 
         try:
-            data = decode(Image.open(filename))[0][0].decode("utf-8")
+            data = decode(Image.open(new_filename))[0][0].decode("utf-8")
             qr = qrcode.QRCode(version=4, box_size=5, border=0, error_correction=qrcode.constants.ERROR_CORRECT_L)
             qr.add_data(data)
             qr.make(fit=True)
             img = qr.make_image()
-            img.save("_" + filename)
-            os.remove(filename)
-            
-            os.rename("_" + filename, newname)
-            print(f"{newname}")
-            i += 1
+            img.save(new_filename)
         except:
             pass
+
+        i += 1
 
 if __name__ == "__main__":
     observer = Observer()
