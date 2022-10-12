@@ -26,22 +26,25 @@ for each_image in os.listdir(IMAGE_INPUT_PATH):
     # 过滤其他类型的文件
     if image_type not in ['.jpg', '.jpeg', '.png']: 
         continue
-    
-    # 打开图像
-    img = Image.open(image_input_fullname)
-    plt.figure("image_input_fullname")
-    plt.subplot(1, 2, 1)
-    plt.imshow(img)
-    plt.axis('off')
+        
+    try:
+        # 打开图像
+        img = Image.open(image_input_fullname)
+        plt.figure("image_input_fullname")
+        plt.subplot(1, 2, 1)
+        plt.imshow(img)
+        plt.axis('off')
 
-    # 裁剪
-    roi_area = img.crop(BOX_LEFT, BOX_UP, BOX_RIGHT, BOX_DOWN)
-    plt.subplot(1, 2, 2)
-    plt.imshow(roi_area)
-    plt.axis('off')
-    
-    # 裁剪完成的文件路径
-    image_output_fullname = IMAGE_OUTPUT_PATH + "/" + each_image
+        # 裁剪
+        new_image = img.crop(BOX_LEFT, BOX_UP, BOX_RIGHT, BOX_DOWN)
+        plt.subplot(1, 2, 2)
+        plt.imshow(new_image)
+        plt.axis('off')
 
-    # 存储裁剪得到的图像
-    roi_area.save(image_output_fullname)
+        # 裁剪完成的文件路径
+        image_output_fullname = IMAGE_OUTPUT_PATH + "/" + each_image
+
+        # 存储裁剪得到的图像
+        new_image.save(image_output_fullname)
+    except:
+        continue
