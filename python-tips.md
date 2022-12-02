@@ -1,10 +1,8 @@
 # Python备忘录
 
+## 循环
 
-## for..in
-
-
-### Case 1
+### level1： 遍历每个元素
 ```python
 colors = ["red", "green", "blue", "purple"]
 
@@ -22,7 +20,7 @@ purple
 
 <br>
 
-### Case 2
+### 遍历每个元素+位置（range）
 
 ```python
 colors = ["red", "green", "blue", "purple"]
@@ -42,7 +40,7 @@ output:
 <br>
 
 
-### Case 3
+### 遍历每个元素+位置（枚举）
 
 ```python
 colors = ["red", "green", "blue", "purple"]
@@ -62,7 +60,7 @@ output:
 <br>
 
 
-### Case 4
+### 遍历每个元素+位置（枚举）+ 格式化输出
 
 ```python
 colors = ["red", "green", "blue", "purple"]
@@ -79,11 +77,78 @@ output:
 04: purple
 ```
 
+<br>
+
+
+### 列表表达式
+
+```python
+colors = ["red", "green", "blue", "purple"]
+
+print([c for c in colors])
+```
+
+output:
+```
+['red', 'green', 'blue', 'purple']
+```
+
+### 列表表达式+过滤
+
+```python
+colors = ["Pink", "Dark red", "Light red", "Tomato"]
+
+print([c for c in colors if 'red' in c])
+```
+
+output:
+```
+['Dark red', 'Light red']
+```
+
+### 列表表达式+判断
+
+```python
+colors = ["Pink", "Dark red", "Light red", "Tomato"]
+
+print(['red' in c for c in colors])
+```
+
+output:
+```
+[False, True, True, False]
+```
+
+### 列表表达式+格式化输出
+
+```python
+colors = ["red", "green", "blue", "purple"]
+
+print([f"({c})" for c in colors])
+```
+
+output:
+```
+['(red)', '(green)', '(blue)', '(purple)']
+```
+
+### 列表表达式+字符串拼接
+
+```python
+colors = ["red", "green", "blue", "purple"]
+
+print(["_".join(c) for c in colors])
+```
+
+output:
+```
+['r_e_d', 'g_r_e_e_n', 'b_l_u_e', 'p_u_r_p_l_e']
+```
 
 <br>
 
 
-### Case 5
+### 打包2个list(zip)
 
 ```python
 colors = ["red", "green", "blue", "purple"]
@@ -101,40 +166,52 @@ output:
 40.0% purple
 ```
 
-
 <br>
 
 
-### Case 6
+### 打包2个list(列表表达式)
 
 ```python
+number = [1, 2, 3, 4]
 colors = ["red", "green", "blue", "purple"]
 
-print(["_".join(c) for c in colors])
+print([(i, c) for i in number for c in colors])
 ```
 
 output:
 ```
-['r_e_d', 'g_r_e_e_n', 'b_l_u_e', 'p_u_r_p_l_e']
+[
+    (1, 'red'), (1, 'green'), (1, 'blue'), (1, 'purple'), 
+    (2, 'red'), (2, 'green'), (2, 'blue'), (2, 'purple'), 
+    (3, 'red'), (3, 'green'), (3, 'blue'), (3, 'purple'), 
+    (4, 'red'), (4, 'green'), (4, 'blue'), (4, 'purple')
+]
 ```
-
 
 <br>
 
 
-### Case 7
+### 合并多个list到dict
 
-```python
-colors = ["red", "green", "blue", "purple"]
+```
+a = ["red", "green", "blue", "purple"]
+b = ["A", "B", "C", "D"]
+c = [1, 2, 3, 4]
 
-print([f"({c})" for c in colors])
+[
+    {'name': name, 'color': color, 'number': number}
+    for name, color, number in zip(a, b, c)
+]
 ```
 
-output:
+ouput:
 ```
-['(red)', '(green)', '(blue)', '(purple)']
+[
+    {'name': 1, 'color': 'a', 'number': '一'},
+    {'name': 2, 'color': 'b', 'number': '二'}, 
+    {'name': 3, 'color': 'c', 'number': '三'}
+]
 ```
-
 
 <br>
 
