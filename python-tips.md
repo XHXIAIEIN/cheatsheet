@@ -148,7 +148,7 @@ output:
 <br>
 
 
-### 打包2个list(zip)
+### 组合2个list(zip)
 
 ```python
 colors = ["red", "green", "blue", "purple"]
@@ -169,7 +169,7 @@ output:
 <br>
 
 
-### 打包2个list(列表表达式)
+### 组合2个list(列表表达式)
 
 ```python
 number = [1, 2, 3, 4]
@@ -189,6 +189,40 @@ output:
 ```
 
 <br>
+
+```python
+number = [1, 2, 3, 4]
+colors = ["red", "green", "pink", "purple"]
+
+print([(i, c) for i in number for c in colors if c[0] == "p"])
+```
+
+output:
+```
+[   
+    (1, 'pink'), (1, 'purple'), 
+    (2, 'pink'), (2, 'purple'), 
+    (3, 'pink'), (3, 'purple'), 
+    (4, 'pink'), (4, 'purple')
+ ]
+```
+
+
+<br>
+
+```python
+number = [1, 2, 3, 4]
+colors = ["red", "green", "pink", "purple"]
+
+print([(i, c) for i in number for c in colors if c[0] == "p" if i>3])
+```
+
+output:
+```
+[
+    (4, 'pink'), (4, 'purple')
+]
+```
 
 
 ### 合并多个list到dict
