@@ -11,7 +11,7 @@ for i in range(len(colors)):
 ```
 
 output:
-```
+```python
 red
 green
 blue
@@ -30,7 +30,7 @@ for i in range(len(colors)):
 ```
 
 output:
-```
+```python
 1: red
 2: green
 3: blue
@@ -50,7 +50,7 @@ for i, name in enumerate(colors, start=1):
 ```
 
 output:
-```
+```python
 1: red
 2: green
 3: blue
@@ -70,7 +70,7 @@ for i, name in enumerate(colors, start=1):
 ```
 
 output:
-```
+```python
 01: red
 02: green
 03: blue
@@ -89,7 +89,7 @@ print([c for c in colors])
 ```
 
 output:
-```
+```python
 ['red', 'green', 'blue', 'purple']
 ```
 
@@ -102,7 +102,7 @@ print([c for c in colors if 'red' in c])
 ```
 
 output:
-```
+```python
 ['Dark red', 'Light red']
 ```
 
@@ -115,7 +115,7 @@ print(['red' in c for c in colors])
 ```
 
 output:
-```
+```python
 [False, True, True, False]
 ```
 
@@ -128,7 +128,7 @@ print([f"({c})" for c in colors])
 ```
 
 output:
-```
+```python
 ['(red)', '(green)', '(blue)', '(purple)']
 ```
 
@@ -141,7 +141,7 @@ print(["_".join(c) for c in colors])
 ```
 
 output:
-```
+```python
 ['r_e_d', 'g_r_e_e_n', 'b_l_u_e', 'p_u_r_p_l_e']
 ```
 
@@ -159,7 +159,7 @@ for color, ratio in zip(colors, ratios):
 ```
 
 output:
-```
+```python
 20.0% red
 30.0% green
 10.0% blue
@@ -179,7 +179,7 @@ print([(i, c) for i in number for c in colors])
 ```
 
 output:
-```
+```python
 [
     (1, 'red'), (1, 'green'), (1, 'blue'), (1, 'purple'), 
     (2, 'red'), (2, 'green'), (2, 'blue'), (2, 'purple'), 
@@ -198,7 +198,7 @@ print([(i, c) for i in number for c in colors if c[0] == "p"])
 ```
 
 output:
-```
+```python
 [   
     (1, 'pink'), (1, 'purple'), 
     (2, 'pink'), (2, 'purple'), 
@@ -217,7 +217,7 @@ print([(i, c) for i in number for c in colors if c[0] == "p" if i>3])
 ```
 
 output:
-```
+```python
 [
     (4, 'pink'), (4, 'purple')
 ]
@@ -233,7 +233,7 @@ print([i for i in zip(number, colors) if i[0]>3])
 ```
 
 output:
-```
+```python
 [
     [(2, 'green'), (4, 'purple')
 ]
@@ -242,7 +242,7 @@ output:
 
 ### 合并多个list到dict
 
-```
+```python
 a = ["red", "green", "blue", "purple"]
 b = ["A", "B", "C", "D"]
 c = [1, 2, 3, 4]
@@ -254,7 +254,7 @@ c = [1, 2, 3, 4]
 ```
 
 ouput:
-```
+```python
 [
     {'name': 1, 'color': 'a', 'number': '一'},
     {'name': 2, 'color': 'b', 'number': '二'}, 
