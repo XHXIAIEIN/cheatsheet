@@ -188,7 +188,7 @@ output:
 ]
 ```
 
-<br>
+Case 2: 条件过滤
 
 ```python
 number = [1, 2, 3, 4]
@@ -207,8 +207,7 @@ output:
  ]
 ```
 
-
-<br>
+Case 3: 多个条件
 
 ```python
 number = [1, 2, 3, 4]
@@ -221,6 +220,22 @@ output:
 ```
 [
     (4, 'pink'), (4, 'purple')
+]
+```
+
+Case 4: 多个条件
+
+```python
+number = [1, 2, 3, 4]
+colors = ["red", "green", "pink", "purple"]
+
+print([i for i in zip(number, colors) if i[0]>3])
+```
+
+output:
+```
+[
+    [(2, 'green'), (4, 'purple')
 ]
 ```
 
