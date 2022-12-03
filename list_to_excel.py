@@ -1,32 +1,19 @@
-#-----------------------------------------------------
-# https://stackoverflow.com/a/61394616/20672242
-#-----------------------------------------------------
+import csv
 
-# pip install xlsxwriter
-
-from xlsxwriter import Workbook
-
-def create_xlsx_file(file_path: str, headers: dict, items: list):
-    with Workbook(file_path) as workbook:
-        worksheet = workbook.add_worksheet()
-        worksheet.write_row(row=0, col=0, data=headers.values())
-        header_keys = list(headers.keys())
-        for index, item in enumerate(items):
-            row = map(lambda field_id: item.get(field_id, ''), header_keys)
-            worksheet.write_row(row=index + 1, col=0, data=row)
-
-
-headers = {
-    'id': 'User Id',
-    'name': 'Name',
-    'rating': 'Rating',
-}
+headers = ['id','name','price']
 
 items = [
-    {'id': 1, 'name': "Ilir Meta", 'rating': 0.06},
-    {'id': 2, 'name': "Abdelmadjid Tebboune", 'rating': 4.0},
-    {'id': 3, 'name': "Alexander Lukashenko", 'rating': 3.1},
-    {'id': 4, 'name': "Miguel Díaz-Canel", 'rating': 0.32}
+    {'id': 1, 'name': "Apple", 'price': 12.0},
+    {'id': 2, 'name': "Banana", 'price': 13.0},
+    {'id': 3, 'name': "Cherry", 'price': 17.0},
+    {'id': 4, 'name': "Mango", 'price': 49.0}
 ]
 
-create_xlsx_file("file.xlsx", headers, items)
+try:
+    with open(r"test.csv", mode='a+', newline='', encoding='utf-8-sig') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=headers)
+        writer.writeheader()
+        for data in items:
+            writer.writerow(data)
+except IOError:
+    print("I/O error")
