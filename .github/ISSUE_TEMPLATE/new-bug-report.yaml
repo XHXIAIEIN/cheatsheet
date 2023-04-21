@@ -57,9 +57,8 @@ body:
     id: platforms
     attributes:
       label: Affected browsers/platforms
-      description: "It's helpful to test as many browsers, platforms or export options as possible. For example an issue occurs in an Android app, does it also occur in Chrome on Windows? How about Firefox? etc."
       multiple: true
-      description: Identifying the first version the issue started happening can help resolve the issue more quickly.
+      description: "Identifying the first version the issue started happening can help resolve the issue more quickly."
       options:
         - Chrome
         - Firefox
@@ -71,7 +70,7 @@ body:
         - Other
   - type: input
     id: version
-    description: roviding this information will make it more likely the issue you are reporting can be fixed quickly.
+    description: "It's helpful to test as many browsers, platforms or export options as possible. For example an issue occurs in an Android app, does it also occur in Chrome on Windows? How about Firefox? etc."
     attributes:
       label: Version
   - type: textarea
