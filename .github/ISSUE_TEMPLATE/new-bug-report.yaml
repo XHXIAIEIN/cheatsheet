@@ -15,7 +15,7 @@ body:
     id: attach
     attributes:
       label: Attach a .c3p
-      description: "A minimal Construct project (.c3p) is required to be attached. Your issue will likely be closed without investigation if you don't provide one. Please see the guidelines"
+      description: "A minimal Construct project (.c3p) is required to be attached. Your issue will likely be closed without investigation if you don't provide one. Please see the guidelines."
       placeholder: Add the file to a zip, or rename the .c3p extension to .zip, it can be attached to the GitHub issue. <br>(GitHub will not accept a file ending in .c3p.)
     validations:
       required: false
@@ -23,7 +23,7 @@ body:
     id: repro
     attributes:
       label: Steps to reproduce
-      description: "These steps are essential for us to be able to help you. Usually it is impossible to investigate reports unless they include steps we can follow ourselves, so please do your best to provide specific steps. There is no need to explain how you made the attached project - just explain what to do to with the project to observe the issue."
+      description: These steps are essential for us to be able to help you. Usually it is impossible to investigate reports unless they include steps we can follow ourselves, so please do your best to provide specific steps. There is no need to explain how you made the attached project - just explain what to do to with the project to observe the issue.
       value: |
         1.
         2.
@@ -58,7 +58,7 @@ body:
     attributes:
       label: Affected browsers/platforms
       multiple: true
-      description: "Identifying the first version the issue started happening can help resolve the issue more quickly."
+      description: Identifying the first version the issue started happening can help resolve the issue more quickly.
       options:
         - Chrome
         - Firefox
@@ -70,9 +70,9 @@ body:
         - Other
   - type: input
     id: version
-    description: "It's helpful to test as many browsers, platforms or export options as possible. For example an issue occurs in an Android app, does it also occur in Chrome on Windows? How about Firefox? etc."
     attributes:
       label: Version
+      description: "It's helpful to test as many browsers, platforms or export options as possible. For example an issue occurs in an Android app, does it also occur in Chrome on Windows? How about Firefox? etc."
   - type: textarea
     id: details
     attributes:
