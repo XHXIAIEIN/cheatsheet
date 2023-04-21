@@ -16,7 +16,7 @@ body:
     attributes:
       label: Attach a .c3p
       description: "A minimal Construct project (.c3p) is required to be attached. Your issue will likely be closed without investigation if you don't provide one. Please see the guidelines"
-      placeholder: add the file to a zip, or rename the .c3p extension to .zip, it can be attached to the GitHub issue. (GitHub will not accept a file ending in .c3p.)
+      placeholder: Add the file to a zip, or rename the .c3p extension to .zip, it can be attached to the GitHub issue. <br>(GitHub will not accept a file ending in .c3p.)
     validations:
       required: false
   - type: textarea
