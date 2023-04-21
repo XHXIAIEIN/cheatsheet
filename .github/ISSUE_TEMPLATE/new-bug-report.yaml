@@ -28,7 +28,6 @@ body:
         1.
         2.
         3.
-      render: bash
     validations:
       required: true
   - type: textarea
@@ -58,9 +57,9 @@ body:
     id: details
     attributes:
       label: System details
-      description: Otherwise please go to Menu > About > Platform information and paste that information there instead.
+      description: If you see a crash report dialog, please copy and paste it to where it says "PASTE HERE" below. <br> Otherwise please go to Menu > About > Platform information and paste that information there instead.
       value: |
-        <details><summary>View details</summary>
+       <details><summary>View details</summary>
 
         PASTE HERE
 
