@@ -48,6 +48,7 @@ body:
     id: release
     attributes:
       label: First affected release
+      description: Identifying the first version the issue started happening can help resolve the issue more quickly.
       options:
         - Latest Stable
         - Latest Beta
@@ -58,7 +59,7 @@ body:
     attributes:
       label: Affected browsers/platforms
       multiple: true
-      description: Identifying the first version the issue started happening can help resolve the issue more quickly.
+      description: "It's helpful to test as many browsers, platforms or export options as possible. For example an issue occurs in an Android app, does it also occur in Chrome on Windows? How about Firefox? etc."
       options:
         - Chrome
         - Firefox
@@ -71,8 +72,8 @@ body:
   - type: input
     id: version
     attributes:
+      description: Providing this information will make it more likely the issue you are reporting can be fixed quickly.
       label: Version
-      description: "It's helpful to test as many browsers, platforms or export options as possible. For example an issue occurs in an Android app, does it also occur in Chrome on Windows? How about Firefox? etc."
   - type: textarea
     id: details
     attributes:
