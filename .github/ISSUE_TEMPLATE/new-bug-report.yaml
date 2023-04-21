@@ -48,12 +48,12 @@ body:
     id: release
     attributes:
       label: First affected release
-      description: Identifying the first version the issue started happening can help resolve the issue more quickly.
       options:
         - Latest Stable
         - Latest Beta
     validations:
       required: true
+      description: Identifying the first version the issue started happening can help resolve the issue more quickly.
   - type: dropdown
     id: platforms
     attributes:
