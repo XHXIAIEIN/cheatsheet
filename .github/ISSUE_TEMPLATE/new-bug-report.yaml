@@ -73,7 +73,7 @@ body:
     id: version
     attributes:
       description: Providing this information will make it more likely the issue you are reporting can be fixed quickly.
-      label: Version
+      label: Platform Version
   - type: textarea
     id: details
     attributes:
