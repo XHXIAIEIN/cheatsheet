@@ -49,7 +49,7 @@ body:
     attributes:
       label: Affected browsers/platforms
       description: Providing this information will make it more likely the issue you are reporting can be fixed quickly.<br>It's helpful to test as many browsers, platforms or export options as possible. For example an issue occurs in an Android app, does it also occur in Chrome on Windows? How about Firefox? etc.
-      placeholder: "Chrome/Firefox/Safari/Edge, Windows/macOS/Android/iOS, etc"
+      placeholder: Chrome/Firefox/Safari/Edge, Windows/macOS/Android/iOS, etc
   - type: dropdown
     id: release
     attributes:
@@ -58,8 +58,6 @@ body:
       options:
         - Latest Stable
         - Latest Beta
-  validations:
-    required: true
   - type: textarea
     id: details
     attributes:
