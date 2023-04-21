@@ -53,13 +53,13 @@ body:
         - Latest Beta
     validations:
       required: true
-      description: Identifying the first version the issue started happening can help resolve the issue more quickly.
   - type: dropdown
     id: platforms
     attributes:
       label: Affected browsers/platforms
-      description: It's helpful to test as many browsers, platforms or export options as possible. For example an issue occurs in an Android app, does it also occur in Chrome on Windows? How about Firefox? etc.
+      description: "It's helpful to test as many browsers, platforms or export options as possible. For example an issue occurs in an Android app, does it also occur in Chrome on Windows? How about Firefox? etc.”
       multiple: true
+      description: Identifying the first version the issue started happening can help resolve the issue more quickly.
       options:
         - Chrome
         - Firefox
