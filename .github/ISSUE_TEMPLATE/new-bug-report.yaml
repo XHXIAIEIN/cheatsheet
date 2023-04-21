@@ -1,6 +1,5 @@
 name: Bug Report
 description: Construct bug reports
-title: ""
 body:
   - type: markdown
     attributes:
