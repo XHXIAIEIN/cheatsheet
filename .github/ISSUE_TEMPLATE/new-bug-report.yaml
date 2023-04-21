@@ -46,33 +46,24 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: platforms
-    attributes:
-      label: Affected browsers/platforms
-      description: It's helpful to test as many browsers, platforms or export options as possible. For example an issue occurs in an Android app, does it also occur in Chrome on Windows? How about Firefox? etc.
-      options:
-        - label: Chrome
-        - label: Firefox
-        - label: Edge
-        - label: Safari
-  - type: dropdown
     id: release
     attributes:
       label: First affected release
       description: Identifying the first version the issue started happening can help resolve the issue more quickly.
+      multiple: true
       options:
-        - label: Latest Stable
-        - label: Latest Beta
+        - Latest Stable
+        - Latest Beta
   - type: textarea
     id: details
     attributes:
       label: System details
       description: Otherwise please go to Menu > About > Platform information and paste that information there instead.
+      render: markdown
       value: |
         <details><summary>View details</summary>
 
         PASTE HERE
 
         </details>
-      render: shell
       
