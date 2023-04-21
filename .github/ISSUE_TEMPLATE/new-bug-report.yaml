@@ -12,6 +12,13 @@ body:
       placeholder: Enter a concise description of your problem here
     validations:
       required: true
+  - type: input
+    id: attach
+    attributes:
+      label: Attach a .c3p
+      description: "A minimal Construct project (.c3p) is required to be attached. Your issue will likely be closed without investigation if you don't provide one. Please see the guidelines"
+    validations:
+      required: true
   - type: textarea
     id: repro
     attributes:
