@@ -69,9 +69,10 @@ body:
       label: System details
       description: Otherwise please go to Menu > About > Platform information and paste that information there instead.
       value: |
-      <details><summary>View details</summary>
+        <details><summary>View details</summary>
 
-      PASTE HERE
+        PASTE HERE
 
-      </details>
+        </details>
       render: shell
+      
