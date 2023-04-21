@@ -12,7 +12,7 @@ body:
       placeholder: Enter a concise description of your problem here
     validations:
       required: true
-  - type: input
+  - type: textarea
     id: attach
     attributes:
       label: Attach a .c3p
