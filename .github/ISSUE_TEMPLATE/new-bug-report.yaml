@@ -1,0 +1,56 @@
+name: Bug Report
+description: Construct bug reports
+title: ""
+body:
+  - type: markdown
+    attributes:
+      value: You must use this template or your issue will be closed without investigation. Please see the guidelines.
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: Problem description
+      description: Also tell us, what did you expect to happen?
+      placeholder: Enter a concise description of your problem here
+      value: ""
+    validations:
+      required: true
+  - type: textarea
+    id: observed-result
+    attributes:
+      label: Observed result
+      description: What do you see happen?
+    validations:
+      required: true
+  - type: textarea
+    id: expected-result
+    attributes:
+      label: Expected result
+      description: What did you expect to happen instead?
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: First affected release:
+      options:
+        - Latest Stable
+        - Latest Beta
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+  - type: textarea
+    id: details
+    attributes:
+      label: System details
+      description: Otherwise please go to Menu > About > Platform information and paste that information there instead.
+      render: shell
