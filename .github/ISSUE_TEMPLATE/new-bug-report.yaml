@@ -45,7 +45,7 @@ body:
       description: What did you expect to happen instead?
     validations:
       required: true
-  - type: checkboxes
+  - type: dropdown
     id: platforms
     attributes:
       label: Affected browsers/platforms
@@ -55,7 +55,7 @@ body:
         - label: Firefox
         - label: Edge
         - label: Safari
-  - type: checkboxes
+  - type: dropdown
     id: release
     attributes:
       label: First affected release
