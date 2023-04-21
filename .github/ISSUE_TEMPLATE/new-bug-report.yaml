@@ -10,7 +10,6 @@ body:
       label: Problem description
       description: Also tell us, what did you expect to happen?
       placeholder: Enter a concise description of your problem here
-      value: ""
     validations:
       required: true
   - type: textarea
