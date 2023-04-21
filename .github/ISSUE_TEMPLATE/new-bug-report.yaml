@@ -15,6 +15,18 @@ body:
     validations:
       required: true
   - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: "These steps are essential for us to be able to help you. Usually it is impossible to investigate reports unless they include steps we can follow ourselves, so please do your best to provide specific steps. There is no need to explain how you made the attached project - just explain what to do to with the project to observe the issue."
+      value: |
+        1.
+        2.
+        3.
+      render: bash
+    validations:
+      required: true
+  - type: textarea
     id: observed-result
     attributes:
       label: Observed result
